@@ -1,21 +1,49 @@
+/* Make sure body takes full screen width */
 body {
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 50px;
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
 }
 
-h1 {
-    color: darkblue;
-}
-
-p {
-    color: #333;
-    font-size: 18px;
-}
-
+/* Image responsive */
 img {
-    margin-top: 20px;
-    border: 3px solid darkblue;
-    border-radius: 10px;
+  max-width: 90%;   /* shrinks image on small screens */
+  height: auto;
+  display: block;
+  margin: 0 auto 20px auto;
+  border-radius: 10px;
+  border: 3px solid darkblue;
+}
+
+/* Responsive text */
+h1, h2, p, li {
+  word-wrap: break-word;
+  font-size: 1.2em;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  button {
+    width: 100%;        /* buttons stretch full width on mobile */
+    margin: 5px 0;
+  }
+
+  input[type="text"] {
+    width: 100%;        /* input box full width */
+    padding: 8px;
+  }
 }
